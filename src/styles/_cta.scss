@@ -1,0 +1,81 @@
+@use 'variables';
+
+.cta {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 3.5rem 2rem 4.5rem 2rem;
+	text-align: center;
+
+	&__title {
+		font-family: variables.$font-titles;
+		font-size: 2.2rem;
+		color: variables.$secondary;
+		margin-bottom: 1.1rem;
+	}
+
+	&__desc {
+		font-size: 1.1rem;
+		color: variables.$detail;
+		margin-bottom: 2.4rem;
+		line-height: 1.6;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+
+		&__button {
+			display: inline-block;
+			color: variables.$text;
+			background: linear-gradient(
+				90deg,
+				variables.$secondary 60%,
+				variables.$primary 100%
+			);
+			font-family: variables.$font-titles;
+			font-size: 1.05rem;
+			padding: 1.1rem 2.4rem;
+			border-radius: 60px;
+			text-decoration: none;
+			font-weight: 700;
+			box-shadow: 0 2px 12px rgba(variables.$secondary, 0.2);
+			transition: background 0.15s;
+
+			&:hover {
+				background: linear-gradient(
+					270deg,
+					variables.$primary 40%,
+					variables.$secondary 100%
+				);
+				color: variables.$detail;
+			}
+		}
+		span {
+			font-size: 14px;
+			font-weight: 600;
+		}
+	}
+
+	@media (max-width: 900px) {
+		max-width: 90%;
+		padding: 2.5rem 1rem 3rem 1rem;
+	}
+
+	@media (max-width: 768px) {
+		&__title {
+			font-size: 1.16rem;
+		}
+
+		&__desc {
+			font-size: 0.97rem;
+		}
+
+		&__button {
+			font-size: 0.98rem;
+			padding: 0.7rem 1.2rem;
+		}
+	}
+}

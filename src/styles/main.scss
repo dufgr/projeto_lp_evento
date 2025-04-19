@@ -1,0 +1,19 @@
+@use 'variables';
+@use 'hero';
+@use 'local';
+@use 'cta';
+
+//Reset
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+// Layout Geral
+body {
+	margin: 0;
+	font-family: variables.$font-text;
+	background: variables.$bg;
+	color: variables.$text;
+}

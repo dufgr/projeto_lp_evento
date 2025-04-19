@@ -1,0 +1,115 @@
+@use 'variables';
+
+.local {
+	display: flex;
+	max-width: 1280px;
+	margin: 0 auto;
+	background: variables.$bg;
+	padding: 4rem 2rem;
+	gap: 3rem;
+
+	&__col {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		&--img {
+			justify-content: center;
+		}
+		&--info {
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		max-width: 440px;
+		border-radius: 1.5rem;
+		box-shadow: 0 4px 32px rgba(variables.$primary, 0.16);
+	}
+
+	&__title {
+		font-family: variables.$font-titles;
+		font-size: 2rem;
+		color: variables.$primary;
+		margin-bottom: 1.2rem;
+	}
+
+	&__desc {
+		font-size: 1.15rem;
+		margin-bottom: 2rem;
+		color: variables.$detail;
+	}
+
+	&__features {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem 1.2rem;
+	}
+
+	&__feature {
+		background: variables.$primary;
+		color: variables.$text;
+		border: none;
+		outline: none;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-size: 1rem;
+		font-family: variables.$font-text;
+		border-radius: 20px;
+		padding: 0.5rem 1.3rem;
+		cursor: default;
+		transition: background 0.2s;
+
+		img {
+			width: 1.2em;
+			height: 1.2em;
+			display: inline-block;
+			filter: brightness(2.2);
+		}
+	}
+
+	@media (max-width: 900px) {
+		max-width: 90%;
+		flex-direction: column;
+		gap: 2.4rem;
+		padding: 3rem 1rem;
+
+		&__col--img,
+		&__col--info {
+			max-width: 100%;
+			justify-content: center;
+		}
+
+		&__image {
+			max-width: 100%;
+		}
+	}
+
+	@media (max-width: 768px) {
+		padding: 1.5rem 0.3rem;
+
+		&__title {
+			font-size: 1.2rem;
+		}
+
+		&__desc {
+			font-size: 0.97rem;
+		}
+
+		&__features {
+			gap: 1rem 0.6rem;
+		}
+
+		&__feature {
+			font-size: 0.95rem;
+			padding: 0.4rem 1.1rem;
+		}
+
+		&__image {
+			border-radius: 1rem;
+			box-shadow: 0 2px 16px rgba(variables.$primary, 0.12);
+		}
+	}
+}
